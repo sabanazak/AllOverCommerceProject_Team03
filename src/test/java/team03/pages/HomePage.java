@@ -31,6 +31,10 @@ public class HomePage {
 
     @FindBy(xpath = "//button[@name='register']")
     public WebElement btnRegisterSignUp;
+
+    @FindBy(linkText = "Become a Vendor")
+    public WebElement becomeVendorButton;
+
     //---------------- SIGN IN ----------------
     @FindBy(id = "username")
     public WebElement inputSigninUsername;
