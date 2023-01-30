@@ -1,1 +1,2 @@
-./src/test/java/resources/UserStoriesAndTestCases.xlsx
+# ignored files
+/src/test/java/resources/UserStoriesAndTestCases.xlsx
