@@ -45,10 +45,6 @@ public class MyAccountPage {
     @FindBy(xpath = "//a[.='Logout']")
     public WebElement menuLogout;
 
-
-
-
-
     @FindBy(xpath = "//a[@href='https://allovercommerce.com/my-account-2/edit-address/billing/']")
     public WebElement linkAddBillingAddresses;
 

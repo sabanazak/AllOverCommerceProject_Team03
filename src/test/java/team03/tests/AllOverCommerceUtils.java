@@ -1,4 +1,4 @@
-package team03.tests.saban;
+package team03.tests;
 
 import team03.pages.HomePage;
 import team03.pages.LoginPage;
