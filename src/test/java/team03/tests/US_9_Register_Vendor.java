@@ -1,16 +1,22 @@
 package team03.tests;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import team03.pages.HomePage;
 import team03.pages.VendorRegistrationPage;
 import team03.utilities.ConfigReader;
 import team03.utilities.Driver;
+import team03.utilities.JSUtils;
+import team03.utilities.ReusableMethods;
 
-public class US_9_Register_Vendor {
+public class US_9_Register_Vendor extends JSUtils {
     HomePage homePage=new HomePage();
     VendorRegistrationPage vendorRegistrationPage= new VendorRegistrationPage();
+
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         //1-Navigate to https://allovercommerce.com/
 
         Driver.getDriver().get(ConfigReader.getProperty("all_over_commerce_url"));
@@ -22,10 +28,31 @@ public class US_9_Register_Vendor {
         homePage.becomeVendorButton.click();
 
         //4-User types a e-mail
-        vendorRegistrationPage.vendorEmail.sendKeys(ConfigReader.getProperty("email"));
+        vendorRegistrationPage.vendorEmail.sendKeys(ConfigReader.getProperty("vendor_email"));
 
         //5-User Clicks “RE-SEND CODE” BUTTON
-        vendorRegistrationPage.reSendCodeButton.click();
+       // vendorRegistrationPage.reSendCodeButton.click();
+
+        //6- Send verification code
+        vendorRegistrationPage.verificationCode.sendKeys("1111");
+
+        //7-Send password
+        vendorRegistrationPage.vendorPassword.sendKeys(ConfigReader.getProperty("vendor_password"));
+
+        //8-Send confirm Password
+        vendorRegistrationPage.confirmPassword.sendKeys(ConfigReader.getProperty("vendor_password"));
+
+        ReusableMethods.waitFor(5);
+
+        //9-Click "REGISTER" button
+
+      //  vendorRegistrationPage.vendorRegisterButton.click();
+        clickElementByJS(vendorRegistrationPage.vendorRegisterButton);
+
+      ReusableMethods.waitFor(2);
+
+        //18-"This Email already exists. Please login to the site and apply as vendor." text should be visible
+       ReusableMethods.verifyElementDisplayed(vendorRegistrationPage.alresdyExistiText);
 
 
 

@@ -26,4 +26,7 @@ public class VendorRegistrationPage {
 
     @FindBy(id = "wcfm_membership_register_button")
     public WebElement vendorRegisterButton;
+
+    @FindBy(xpath = "//div[@class='wcfm-message wcfm-error']")
+    public WebElement alresdyExistiText;
 }

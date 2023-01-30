@@ -39,7 +39,7 @@ public class HomePage {
     @FindBy(id = "username")
     public WebElement inputSigninUsername;
 
-    @FindBy(id = "reg_password")
+    @FindBy(id = "password")
     public WebElement inputSiginPassword;
 
     @FindBy(id = "rememberme")

@@ -23,5 +23,8 @@ public class MyAccountPage {
     @FindBy(xpath = "//a[@href='https://allovercommerce.com/my-account-2/edit-account/']")
     public WebElement linkAccountDetails;
 
+    @FindBy(linkText = "Store Manager")
+    public WebElement btnStoreManager;
+
 
 }
