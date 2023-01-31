@@ -16,36 +16,15 @@ public class HomePage {
 
     @FindBy(xpath = "//a[@class='login inline-type']")
     public WebElement linkSignIn;
-    //---------------- REGISTER ----------------
-    @FindBy(id = "reg_username")
-    public WebElement inputRegisterUsername;
 
-    @FindBy(id = "reg_email")
-    public WebElement inputRegisterEmail;
-
-    @FindBy(id = "reg_password")
-    public WebElement inputRegisterPassword;
-
-    @FindBy(id = "register-policy")
-    public WebElement chkRegisterPolicy;
-
-    @FindBy(xpath = "//button[@name='register']")
-    public WebElement btnRegisterSignUp;
-    //---------------- SIGN IN ----------------
-    @FindBy(id = "username")
-    public WebElement inputSigninUsername;
-
-    @FindBy(id = "reg_password")
-    public WebElement inputSiginPassword;
-
-    @FindBy(id = "rememberme")
-    public WebElement chkRememberMe;
-
-    @FindBy(xpath = "//button[@name='login']")
-    public WebElement btnSignIn;
     //-----------------------------------------
     @FindBy(xpath = "//a[@class='login logout inline-type']")
-    public WebElement btnSignOut;
+    public WebElement linkSignOut;
 
+    @FindBy(xpath = "(//a[@href='https://allovercommerce.com/wishlist/'])[1]")
+    public WebElement linkWishlist;
+
+    @FindBy(xpath = "(//a[@href='https://allovercommerce.com/cart/'])[1]")
+    public WebElement linkCart;
 
 }
