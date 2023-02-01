@@ -41,4 +41,15 @@ public class ShippingAddressPage {
     @FindBy(xpath = "//button[.='Save address']")
     public WebElement btnShippingSaveAddress;
 
+@FindBy(xpath = "//body[@data-rsssl='1']")
+    public WebElement countrySelect;
+
+@FindBy(xpath = "//span[@class='select2-selection__arrow']")
+    public WebElement countrySelect1;
+
+//@FindBy(id= "select2-shipping_state-container")
+ //   public WebElement shippingCountry2;
+
+@FindBy(xpath = "//span[@class='select2-selection__placeholder']")
+    public WebElement shippingCounty;
 }

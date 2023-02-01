@@ -17,6 +17,9 @@ public class HomePage {
     @FindBy(xpath = "//a[@class='login inline-type']")
     public WebElement linkSignIn;
     //---------------- REGISTER ----------------
+
+
+
     @FindBy(id = "reg_username")
     public WebElement inputRegisterUsername;
 
@@ -31,11 +34,14 @@ public class HomePage {
 
     @FindBy(xpath = "//button[@name='register']")
     public WebElement btnRegisterSignUp;
+
+    @FindBy(linkText = "Become a Vendor")
+    public WebElement becomeVendorButton;
     //---------------- SIGN IN ----------------
     @FindBy(id = "username")
     public WebElement inputSigninUsername;
 
-    @FindBy(id = "reg_password")
+    @FindBy(id = "password")
     public WebElement inputSiginPassword;
 
     @FindBy(id = "rememberme")
