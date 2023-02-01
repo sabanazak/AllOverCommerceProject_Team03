@@ -17,7 +17,7 @@ public class TestData {
     private TestData() { }
     private static String excelFilePath="./src/test/java/resources/SabanTestData.xlsx";
     private static List<String> excelFileSheets=new ArrayList<>();
-    private static Map<String,List<Map<String,String>>> testData;   //Map<SheetName,SheetData>
+    public static Map<String,List<Map<String,String>>> testData;   //Map<SheetName,SheetData>
 
 
     private static List<String> getSheetNames(){
