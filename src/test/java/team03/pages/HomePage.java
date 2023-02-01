@@ -32,16 +32,22 @@ public class HomePage {
     @FindBy(xpath = "//button[@name='register']")
     public WebElement btnRegisterSignUp;
     //---------------- SIGN IN ----------------
+    @FindBy(xpath = "//a[@class='login inline-type']")
+    public WebElement vendorSignIn;
+
     @FindBy(id = "username")
     public WebElement inputSigninUsername;
 
-    @FindBy(id = "reg_password")
+    @FindBy(xpath = "//input[@id='password']")
     public WebElement inputSiginPassword;
 
-    @FindBy(id = "rememberme")
+    @FindBy(id = "rememberme")git
     public WebElement chkRememberMe;
 
-    @FindBy(xpath = "//button[@name='login']")
+   // @FindBy(xpath = "//button[@name='login']")
+    //public WebElement btnSignIn;
+
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement btnSignIn;
     //-----------------------------------------
     @FindBy(xpath = "//a[@class='login logout inline-type']")

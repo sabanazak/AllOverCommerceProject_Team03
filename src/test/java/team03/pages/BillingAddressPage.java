@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import team03.utilities.Driver;
 
+import javax.security.auth.x500.X500Principal;
+
 public class BillingAddressPage {
 
     public BillingAddressPage(){
@@ -46,5 +48,19 @@ public class BillingAddressPage {
 
     @FindBy(xpath = "//button[.='Save address']")
     public WebElement btnBillingSaveAddress;
+    //////////////////////////////
+
+    @FindBy(id = "select2-billing_country-container")
+    public WebElement clickCountryArrow;
+
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement sendCountryName;
+
+
+    @FindBy(xpath= "//span[@class='select2-selection__placeholder']")
+    public WebElement clickStateArrow;
+
+    @FindBy(xpath = "//input[@class='select2-search__field']")
+    public WebElement sendStateName;
 
 }
