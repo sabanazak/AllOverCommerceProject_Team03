@@ -75,12 +75,12 @@ accountDetailsPage.inputAccountLastName.sendKeys("Yildiz");
 accountDetailsPage.inputAccountEmail.sendKeys("team03.user@gmail.com");
 
        ReusableMethods.waitFor(1);
-//accountDetailsPage.inputBiography.sendKeys("1");
+//accountDetailsPage.inputBiography.sendKeys("1");git merge
 
 
 
 
-        ReusableMethods.waitFor(1);
+      //  ReusableMethods.waitFor(1);
 accountDetailsPage.inputAccountCurrentPassword.sendKeys("TechProEd");
         ReusableMethods.waitFor(1);
 
