@@ -56,6 +56,9 @@ public class StoreManagerPage {
     @FindBy(name = "apply_coupon")
     public WebElement btnApply_coupon;
 
+    @FindBy(xpath = "//tr[@class='cart-discount coupon-55555']")
+    public WebElement createdCoupon;
+
 
 
 

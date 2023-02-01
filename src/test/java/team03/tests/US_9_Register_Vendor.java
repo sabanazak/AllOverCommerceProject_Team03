@@ -20,6 +20,7 @@ public class US_9_Register_Vendor extends JSUtils {
         //1-Navigate to https://allovercommerce.com/
 
         Driver.getDriver().get(ConfigReader.getProperty("all_over_commerce_url"));
+        Actions actions=new Actions(Driver.getDriver());
 
         //2-User Clicks "Register" button
         homePage.linkRegister.click();

@@ -44,11 +44,11 @@ public class US_20_create_coupons extends JSUtils {
 
         ReusableMethods.waitFor(3);
         //got to coupons page
-
-      //  storeManagerPage.btnCoupons.click();
         clickElementByJS(storeManagerPage.btnCoupons);
 
         clickElementByJS(storeManagerPage.btnAddNew);
+
+        //user types input boxes
         storeManagerPage.codeInput.sendKeys("55555");
         storeManagerPage.descriptionInput.sendKeys("new coupon 1");
 
@@ -77,11 +77,15 @@ public class US_20_create_coupons extends JSUtils {
         clickElementByJS(storeManagerPage.btnCart);
         storeManagerPage.btnCheckout.click();
 
-        storeManagerPage.enterYourCode.click();
+       // storeManagerPage.enterYourCode.click();
         ReusableMethods.waitFor(2);
 
-        storeManagerPage.coupon_codeInput.sendKeys("55555");
-        storeManagerPage.btnApply_coupon.click();
+       // storeManagerPage.coupon_codeInput.sendKeys("55555");
+       // storeManagerPage.btnApply_coupon.click();
+
+        ReusableMethods.verifyElementDisplayed(storeManagerPage.createdCoupon);
+
+
 
 
 
