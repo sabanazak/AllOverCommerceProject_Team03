@@ -41,7 +41,7 @@ public class HomePage {
     @FindBy(xpath = "//input[@id='password']")
     public WebElement inputSiginPassword;
 
-    @FindBy(id = "rememberme")git
+    @FindBy(id = "rememberme")
     public WebElement chkRememberMe;
 
    // @FindBy(xpath = "//button[@name='login']")
