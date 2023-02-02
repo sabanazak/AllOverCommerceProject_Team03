@@ -58,21 +58,21 @@ public class TestData {
 
     //testCaseNumber format should be TC01, TC02
     public static Map<String,String> US01(String testCaseNumber) {
+        return getDataFromSheet("US_01_TestData",testCaseNumber);
+    }
+
+    public static Map<String,String> US02(String testCaseNumber) {
+        return getDataFromSheet("US_02_TestData",testCaseNumber);
+    }
+
+    private static Map<String,String> getDataFromSheet(String sheetName,String testCaseNumber){
         readExcelFile();
-        List<Map<String,String>> sheetData=testData.get("US_01_TestData");
+        List<Map<String,String>> sheetData=testData.get(sheetName);
         testCaseNumber = testCaseNumber.replaceAll("[^0-9]", "");
         int  testCaseDataRowIndex = Integer.parseInt(testCaseNumber.replaceAll("[^0-9]", ""));
         Map<String,String> testData=sheetData.get(testCaseDataRowIndex-1);
         return testData;
     }
 
-    public static Map<String,String> US02(String testCaseNumber) {
-        readExcelFile();
-        List<Map<String,String>> sheetData=testData.get("US_02_TestData");
-        testCaseNumber = testCaseNumber.replaceAll("[^0-9]", "");
-        int  testCaseDataRowIndex = Integer.parseInt(testCaseNumber.replaceAll("[^0-9]", ""));
-        Map<String,String> testData=sheetData.get(testCaseDataRowIndex-1);
-        return testData;
-    }
 
 }
